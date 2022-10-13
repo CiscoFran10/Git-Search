@@ -1,1 +1,103 @@
-/* Desenvolva sua estilização aqui...*/
+:root {
+	--color-brand-1: #c2255c;
+	--color-brand-2: #d6336c;
+	--color-grey-1: #191c1f;
+	--color-grey-2: #212529;
+	--color-grey-3: #33363a;
+	--color-grey-4: #373b3e;
+	--color-grey-6: #a6a8a9;
+	--color-grey-7: #ffffff;
+	--color-alert: #c22554;
+	--radius: 0.25rem;
+}
+
+body {
+	padding: 60px 0px;
+	background-color: var(--color-grey-2);
+}
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.user-profile {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.user-image {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 2px solid var(--color-brand-2);
+}
+
+.user-info h1 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 0.875rem;
+}
+
+.user-info span {
+	font-size: 1rem;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.header .links {
+	display: flex;
+	gap: 14px;
+}
+
+.header .links .btn {
+	padding: 0.6rem 1.6rem;
+	border-radius: 8px;
+}
+
+.grid {
+	margin-top: 80px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.card {
+	display: grid;
+	gap: 20px;
+	padding: 40px 28px;
+	border-radius: 8px;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+	border: 2px solid #ffffff;
+}
+
+.card h2 {
+	font-size: 1.25rem;
+	font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card p {
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.card-links {
+	display: flex;
+	gap: 14px;
+}

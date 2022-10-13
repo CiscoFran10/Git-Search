@@ -1,1 +1,177 @@
-/* Desenvolva sua estilização aqui...*/
+:root {
+	--color-brand-1: #c2255c;
+	--color-brand-2: #d6336c;
+	--color-grey-1: #191c1f;
+	--color-grey-2: #212529;
+	--color-grey-3: #33363a;
+	--color-grey-4: #373b3e;
+	--color-grey-6: #a6a8a9;
+	--color-grey-7: #ffffff;
+	--color-alert: #c22554;
+	--radius: 0.25rem;
+}
+
+.grid {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr;
+}
+
+.intro-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 160px;
+	background-color: var(--color-brand-1);
+}
+
+.intro-section h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 36px;
+}
+
+.intro-section p {
+	font-size: 1.25rem;
+	font-weight: 400;
+	margin-bottom: 45px;
+}
+
+.intro-profiles {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.intro-profiles h2 {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.intro-profiles .list {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.intro-profiles .list-item {
+	width: 44px;
+	height: 44px;
+	position: relative;
+}
+
+.intro-profiles img {
+	border-radius: 50%;
+}
+
+.intro-profiles a {
+	transition: 0.3s;
+	opacity: 0;
+	left: -40px;
+	width: max-content;
+	font-size: 0.75rem;
+	font-weight: 500;
+	bottom: -20px;
+	z-index: 20;
+	text-align: center;
+	border-radius: var(--radius);
+	text-decoration: none;
+	position: absolute;
+	padding: 6px 8px;
+	color: var(--color-grey-2);
+	background-color: var(--color-grey-7);
+}
+
+.intro-profiles:hover a {
+	opacity: 1;
+}
+
+.form-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 160px;
+	background-color: var(--color-grey-2);
+}
+
+.form-section h1 {
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin-bottom: 36px;
+}
+
+.form-section form {
+	max-width: 320px;
+}
+
+.form-section label {
+	display: block;
+	color: inherit;
+	font-size: 0.875rem;
+	font-weight: 400;
+	margin-bottom: 0.75rem;
+}
+
+.form-section input {
+	display: block;
+	height: 38px;
+	width: 100%;
+	padding: 8px 10px;
+	background-color: var(--color-grey-1);
+	border-radius: var(--radius);
+	border: 2px solid rgba(255, 255, 255, 0.12);
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 0.875rem;
+	font-family: inherit;
+}
+
+.form-section input:focus {
+	border: 2px solid #ffffff;
+}
+
+.form-section input.error {
+	border: 2px solid var(--color-alert);
+}
+
+.form-section .btn {
+	width: 100%;
+	position: relative;
+	margin-top: 1.25rem;
+}
+
+.form-section .btn:disabled {
+	color: rgba(255, 255, 255, 0.35);
+	background: rgba(214, 51, 108, 0.4);
+}
+
+.btn.loading .btn-text {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.btn.loading::after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	animation: spinner 1s linear infinite;
+	background: url(./spinner.svg) no-repeat center;
+}
+
+.error-text {
+	display: none;
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: var(--color-alert);
+	padding-top: 0.75rem;
+}
+
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}
