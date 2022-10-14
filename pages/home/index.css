@@ -54,36 +54,38 @@
 	gap: 10px;
 }
 
-.intro-profiles .list-item {
+.list-item {
 	width: 44px;
 	height: 44px;
 	position: relative;
 }
 
-.intro-profiles img {
+.list-item img {
 	border-radius: 50%;
 }
 
-.intro-profiles a {
-	transition: 0.3s;
-	opacity: 0;
+.list-item a {
 	left: -40px;
 	width: max-content;
 	font-size: 0.75rem;
 	font-weight: 500;
 	bottom: -20px;
-	z-index: 20;
+	z-index: 200;
 	text-align: center;
 	border-radius: var(--radius);
 	text-decoration: none;
 	position: absolute;
-	padding: 6px 8px;
 	color: var(--color-grey-2);
 	background-color: var(--color-grey-7);
+	transform: translateY(-20px);
+	padding: 6px 8px;
+	transition: 0.3s;
+	display: none;
 }
 
-.intro-profiles:hover a {
-	opacity: 1;
+.list-item.hover:hover a {
+	transform: translateY(0px);
+	display: block;
 }
 
 .form-section {
