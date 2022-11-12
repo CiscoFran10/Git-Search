@@ -23,7 +23,7 @@ function getUser() {
 					if (githubUser) {
 						setLocalStorage(githubUser);
 						localStorage.setItem("searched-value", JSON.stringify(githubUser));
-						window.location.href = "/profile/index.html";
+						window.location.href = "../../pages/profile/index.html";
 					}
 				} else {
 					errorText.style.display = "block";
